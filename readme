@@ -15,7 +15,7 @@ log4cpp有如下优点：
 
 二、下载、安装与使用 
 		
-		1.下载log4cpp-1.1.1.tar.gz   
+        1.下载log4cpp-1.1.1.tar.gz   
 
         2. 安装：以root权限打开终端，
           # cd /usr/local
