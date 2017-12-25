@@ -47,8 +47,8 @@ log4cpp有如下优点：
 		http://blog.csdn.net/liuhong135541/article/category/1496383
 
 **************************************注:*************************************
-myLog.h 文件是用单例类模式封装好的，usage.cpp就是一个引入myLog.h的一个例子；
-封装采用了3中Appender:
+"myLog.h"文件是用单例类模式封装好的,"usage.cpp"就是一个引入"myLog.h"的一个例子;
+封装采用了3种Appender:
 	1.log4cpp::OstreamAppender
 		log4cpp::OstreamAppender* osAppender = new log4cpp::OstreamAppender("osAppender",&cout);    
 	2.log4cpp::FileAppender
