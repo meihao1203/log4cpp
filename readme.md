@@ -1,0 +1,70 @@
+一、简介
+    log4cpp是一个开源的C++类库，它提供了在C++程序中使用日志和跟踪调试的功能。使用log4cpp，可以很便利地将日志或者跟踪调试信息写入字符流、内存字符串队列、文件、回滚文件、调试器、Windows日志、syslog和远程syslog服务器中。
+    Log4cpp是个基于LGPL的开源项目，移植自Java的日志处理跟踪项目log4j，并保持了API上的一致。其类似的支持库还包括Java(log4j)，C++(log4cpp、log4cplus)，C(log4c)，python(log4p)等。
+
+log4cpp有如下优点：
+
+　　　　• 提供了可扩展的多种日志记录方式；
+　　　　• 提供了NDC(嵌套诊断上下文)，可用于多线程、多场景的跟踪调试；
+　　　　• 提供了完整的日志动态优先级控制，可随时调整需要记录的日志优先级；
+　　　　• 可通过配置文件完成所有配置并动态加载；
+　　　　• 性能优秀，内存占用小，经过编译后的log4cpp.dll大小仅有160kb；
+　　　　• 代码级的平台无关性，Log4cpp源代码经过编译后，适用于大多数主流的操作系统和开发工具；
+        • 概念清晰，学习和使用方便，熟练程序员一天之内即可很好地应用log4cpp进行开发。
+
+二、下载、安装与使用 
+		1.下载log4cpp-1.1.1.tar.gz   
+
+        2. 安装：以root权限打开终端，
+          # cd /usr/local
+          # tar -zxvf log4cpp-1.1.1.tar.gz
+
+          # cd /usr/local/log4cpp/
+          # ./configure
+          # make
+          # make check
+          # make install
+
+          这里已经安装成功.
+          默认lib库路径是 ： /usr/local/lib/
+          默认头文件的位置： /usr/local/include/log4cpp       
+
+       3. 使用:
+         3.1 编译使用log4cpp库的CPP文件时，要加上库文件:
+
+         (usage:) 
+	         g++ log4test.cpp -llog4cpp -lpthread
+
+          才能顺利的编译通过
+
+         3.2 运行时，如若提示缺少log4cpp库文件，表示找不到log4cpp的动态库，需要进行以下设置以管理员身份登录终端，然后执行以下操作：
+             a. # vim /etc/ld.so.conf
+             b. 在打开的文件末尾添加动态库log4cpp的路径(这里是/usr/local/lib)，然后保存退出；执行命令ldconfig使设置生效即可。       
+             c. # ldconfig
+	  
+三、学习博客
+		http://blog.csdn.net/liuhong135541/article/category/1496383
+
+************************************************注：************************************************
+myLog.h 文件是用单例类模式封装好的，usage.cpp就是一个引入myLog.h的一个例子；
+封装采用了3中Appender:
+	1.log4cpp::OstreamAppender
+		log4cpp::OstreamAppender* osAppender = new log4cpp::OstreamAppender("osAppender",&cout);    
+	2.log4cpp::FileAppender
+		log4cpp::FileAppender*fileAppender = new log4cpp::FileAppender("fileAppender","log");
+	3.log4cpp::RollingFileAppender()(已被注释掉,可以自己打开)
+		log4cpp::RollingFileAppender* rollingfileAppender = new log4cpp::RollingFileAppender(
+				          "rollingfileAppender","logrolling.log",5*1024,5);
+
+usage:(msg is a const char * string,compile need add command -llog4cpp -lpthread)
+	#include"myLog.h"
+	logFatal(msg);
+	logError(msg);
+	logWarn(msg);
+	logInfo(msg);
+	logDebug(msg);
+	logDestroy();
+
+---------------------------------------------------------------------------------------------------
+日志记录格式：
+2017-12-25 17:22:43,932: INFO rootCategory : system is running {fileName:test.cpp functionName:main lineNumber:17}
