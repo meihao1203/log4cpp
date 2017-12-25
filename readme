@@ -46,7 +46,7 @@ log4cpp有如下优点：
 三、学习博客
 		http://blog.csdn.net/liuhong135541/article/category/1496383
 
-******************************************************注:******************************************************
+**************************************注:*************************************
 myLog.h 文件是用单例类模式封装好的，usage.cpp就是一个引入myLog.h的一个例子；
 封装采用了3中Appender:
 	1.log4cpp::OstreamAppender
@@ -66,6 +66,6 @@ usage:(msg is a const char * string,compile need add command -llog4cpp -lpthread
 	logDebug(msg);
 	logDestroy();
 
---------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 日志记录格式：
 2017-12-25 17:22:43,932: INFO rootCategory : system is running {fileName:test.cpp functionName:main lineNumber:17}
