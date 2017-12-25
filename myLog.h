@@ -76,12 +76,12 @@ myLog::myLog():rootCategory(log4cpp::Category::getRoot().getInstance("rootCatego
 }
 inline myLog::~myLog()
 {
-	_plog->rootCategory.info("~mylog()");
-	_plog->rootCategory.shutdown();   
+	rootCategory.info("~mylog()");
+	rootCategory.shutdown();   
 }
 inline void myLog::destroy()
 {
-	_plog->rootCategory.info("myLog destroy");
+	_plog->rootCategory.info("myLog destroy");   //静态函数内部没有隐士传递的this指针，所以必须要用_plog对象指针来调用
 	delete _plog;   //delete的处理方式是：先调用析构函数，然后在释放空间；
 	//所以可以在析构函数里再向日志里打印信息，然后再关掉rootCategory
 }

@@ -65,6 +65,7 @@ usage:(msg is a const char * string,compile need add command -llog4cpp -lpthread
 	logInfo(msg);
 	logDebug(msg);
 	logDestroy();
+	logSetpriority(DEBUG);  //enum PriorityLevel
 
 -----------------------------------------------------------------------------------
 日志记录格式：
