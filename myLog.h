@@ -54,7 +54,7 @@ myLog::myLog():rootCategory(log4cpp::Category::getRoot().getInstance("rootCatego
 	rootCategory.addAppender(osAppender);
 	rootCategory.setPriority(log4cpp::Priority::DEBUG);
 
-	//mylog.log会一直记录
+	//log文件会一直记录
 	log4cpp::FileAppender*fileAppender = new log4cpp::FileAppender("fileAppender","log");
 	log4cpp::PatternLayout* pLayout2 = new log4cpp::PatternLayout();
 	pLayout2->setConversionPattern("%d: %p %c %x: %m%n");
@@ -62,7 +62,7 @@ myLog::myLog():rootCategory(log4cpp::Category::getRoot().getInstance("rootCatego
 	rootCategory.addAppender(fileAppender);
 	rootCategory.setPriority(log4cpp::Priority::DEBUG);
 
-	//mylogrolling.log不超过指定大小，默认10M；这里我设置了5M,备份文件5个
+	//logrolling.log不超过指定大小，默认10M；这里我设置了5M,备份文件5个
 //如果想要用备份带回卷的日志文件记录方式，就把这里的注释去掉
 //	log4cpp::RollingFileAppender* rollingfileAppender = new log4cpp::RollingFileAppender(
 //			"rollingfileAppender","logrolling.log",5*1024,5);
