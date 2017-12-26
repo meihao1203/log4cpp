@@ -130,10 +130,10 @@ inline void myLog::fatal(const char* msg)
 
 /***********************myLog类定义完毕***********************/
 /***********************定义一些宏，引用的时候直接展开，让myLog使用更方便***********************/
-//把要输出的消息拼接上文件名，所在函数名，所在行号;msg是const char*，所以最后用c_str()函数
-//__FILE__ __func__ __LINE 这几个宏定义是编译器识别的，__LINE__是int形
+//把要输出的消息拼接上文件名，所在函数名，所在行号;msg是const char*，所以最后用c_str()函数进行转换
+//__FILE__ __func__ __LINE 这几个宏定义是编译器识别的，__LINE__是int类型
 //分别是文件名，函数名，所在行号
-//防止在函数中调用，声明成内联函数
+//防止在函数中调用，减少调用开销，声明成内联函数
 inline string int2string(int lineNumber)
 {
 	ostringstream oss;
