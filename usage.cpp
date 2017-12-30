@@ -1,8 +1,8 @@
  //
- /// @file    test.cpp
+ /// @file    useage.cpp
  /// @author  meihao1203(meihao19931203@outlook.com)
  /// @date    2017-12-25 16:07:49
- ///
+ 
  
 //编译需要加上 -llog4cpp -lpthread
 #include"myLog.h"
