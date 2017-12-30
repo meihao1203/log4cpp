@@ -70,4 +70,4 @@ usage:(msg is a const char * string,compile need add command -llog4cpp -lpthread
 
 -----------------------------------------------------------------------------------
 日志记录格式：
-2017-12-25 17:22:43,932: INFO rootCategory : system is running {fileName:test.cpp functionName:main lineNumber:17}
+2017-12-25 17:22:43,932: INFO rootCategory : system is running {fileName:usage.cpp functionName:main lineNumber:17}
