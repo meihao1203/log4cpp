@@ -1,0 +1,27 @@
+2018-07-18 09:20:28,145: INFO rootCategory : myLog()
+2018-07-18 09:20:28,146: INFO rootCategory : add func {fileName:add.cpp functionName:add lineNumber:12}
+2018-07-18 09:20:28,146: INFO rootCategory : system is running {fileName:usage.cpp functionName:main lineNumber:19}
+2018-07-18 09:20:28,146: WARN rootCategory : system has a warning {fileName:usage.cpp functionName:main lineNumber:20}
+2018-07-18 09:20:28,147: ERROR rootCategory : system has a error {fileName:usage.cpp functionName:main lineNumber:21}
+2018-07-18 09:20:28,147: FATAL rootCategory : system has a fatal {fileName:usage.cpp functionName:main lineNumber:22}
+2018-07-18 09:20:28,147: INFO rootCategory : this is a function {fileName:usage.cpp functionName:func lineNumber:14}
+2018-07-18 09:20:28,147: INFO rootCategory : myLog destroy
+2018-07-18 09:20:28,147: INFO rootCategory : ~mylog()
+2018-07-18 09:26:02,323: INFO rootCategory : myLog()
+2018-07-18 09:26:02,324: INFO rootCategory : add func {fileName:add.cpp functionName:add lineNumber:12}
+2018-07-18 09:26:02,324: INFO rootCategory : system is running {fileName:usage.cpp functionName:main lineNumber:19}
+2018-07-18 09:26:02,324: WARN rootCategory : system has a warning {fileName:usage.cpp functionName:main lineNumber:20}
+2018-07-18 09:26:02,324: ERROR rootCategory : system has a error {fileName:usage.cpp functionName:main lineNumber:21}
+2018-07-18 09:26:02,324: FATAL rootCategory : system has a fatal {fileName:usage.cpp functionName:main lineNumber:22}
+2018-07-18 09:26:02,324: INFO rootCategory : this is a function {fileName:usage.cpp functionName:func lineNumber:14}
+2018-07-18 09:26:02,324: INFO rootCategory : myLog destroy
+2018-07-18 09:26:02,324: INFO rootCategory : ~mylog()
+2018-07-18 09:29:05,889: INFO rootCategory : myLog()
+2018-07-18 09:29:05,889: INFO rootCategory : add func {fileName:add.cpp functionName:add lineNumber:12}
+2018-07-18 09:29:05,889: INFO rootCategory : system is running {fileName:usage.cpp functionName:main lineNumber:19}
+2018-07-18 09:29:05,889: WARN rootCategory : system has a warning {fileName:usage.cpp functionName:main lineNumber:20}
+2018-07-18 09:29:05,890: ERROR rootCategory : system has a error {fileName:usage.cpp functionName:main lineNumber:21}
+2018-07-18 09:29:05,890: FATAL rootCategory : system has a fatal {fileName:usage.cpp functionName:main lineNumber:22}
+2018-07-18 09:29:05,890: INFO rootCategory : this is a function {fileName:usage.cpp functionName:func lineNumber:14}
+2018-07-18 09:29:05,890: INFO rootCategory : myLog destroy
+2018-07-18 09:29:05,890: INFO rootCategory : ~mylog()
